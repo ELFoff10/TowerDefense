@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace SpaceShooter
+namespace TowerDefense
 {
     /// <summary>
     /// Уничтожаемый объект на сцене. То что может иметь хит поинты.
@@ -130,5 +130,11 @@ namespace SpaceShooter
         public int ScoreValue => m_ScoreValue;
 
         #endregion
+
+        protected void Use(EnemyAsset enemyAsset)
+        {
+            m_HitPoints = enemyAsset.HP;
+            m_ScoreValue = enemyAsset.Score;
+        }
     }
 }

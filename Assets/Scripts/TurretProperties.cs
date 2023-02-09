@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SpaceShooter
+namespace TowerDefense
 {
     /// <summary>
     /// Подтип оружия. Недо для паверапки чтобы понять куда в какой слот заменять.
@@ -10,7 +10,9 @@ namespace SpaceShooter
     public enum TurretMode
     {
         Primary,
-        Secondary
+        Secondary,
+        Auto
+            
     }
 
     [CreateAssetMenu]

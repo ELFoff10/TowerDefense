@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SpaceShooter
+namespace TowerDefense
 {
     /// <summary>
     /// Определение эпизода как набора уровней. Уровни идут последовательно.
@@ -19,6 +19,7 @@ namespace SpaceShooter
         /// <summary>
         /// Список названий сцен. Последовательно.
         /// </summary>
+        [Header("Array!!!")]
         [SerializeField] private string[] m_Levels;
         public string[] Levels => m_Levels;
 

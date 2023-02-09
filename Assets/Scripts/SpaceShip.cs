@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Profiling;
 using UnityEngine;
 
-namespace SpaceShooter
+namespace TowerDefense
 {
     /// <summary>
     /// Летательный аппарат 2Д.
@@ -193,6 +194,12 @@ namespace SpaceShooter
         public void Fire(TurretMode mode)
         {
             return;
+        }
+
+        public void Use(EnemyAsset enemyAsset)
+        {
+            m_MaxLinearVelocity = enemyAsset.MoveSpeed;
+            base.Use(enemyAsset);
         }
 
         //#endregion

@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace SpaceShooter
+namespace TowerDefense
 {
     /// <summary>
     /// Скрипт управления AI. Цепляется на префаб корабля.
@@ -189,15 +187,7 @@ namespace SpaceShooter
 
                     if (isInsidePatrolZone)
                     {
-                        // если катаемся внутри зоны патрулирования то выбираем случайную точки внутри.
-                        if (IsActionTimerFinished(ActionTimerType.RandomizeDirection))
-                        {
-                            Vector2 newPoint = UnityEngine.Random.onUnitSphere * m_PatrolPoint.Radius + m_PatrolPoint.transform.position;
-                            m_MovePosition = newPoint;
-
-
-                            SetActionTimer(ActionTimerType.RandomizeDirection, m_RandomSelectMovePointTime);
-                        }
+                        GetNewPoint();
                     }
                     else
                     {
@@ -205,9 +195,20 @@ namespace SpaceShooter
                         m_MovePosition = m_PatrolPoint.transform.position;
                     }
                 }
-
             }
+        }
 
+        protected virtual void GetNewPoint()
+        {
+            // если катаемся внутри зоны патрулирования то выбираем случайную точки внутри.
+            if (IsActionTimerFinished(ActionTimerType.RandomizeDirection))
+            {
+                Vector2 newPoint = UnityEngine.Random.onUnitSphere * m_PatrolPoint.Radius + m_PatrolPoint.transform.position;
+                m_MovePosition = newPoint;
+
+
+                SetActionTimer(ActionTimerType.RandomizeDirection, m_RandomSelectMovePointTime);
+            }
         }
 
         #region Action timers

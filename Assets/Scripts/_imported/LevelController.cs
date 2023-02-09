@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace SpaceShooter
+namespace TowerDefense
 {
     /// <summary>
     /// Интерфейс условия прохождения уровня.
@@ -42,6 +42,7 @@ namespace SpaceShooter
         /// <summary>
         /// Массив условий для успешного прохождения уровня.
         /// </summary>
+        [Header("Array!!!")]
         private ILevelCondition[] m_Conditions;
 
         private bool m_IsLevelCompleted; // флаг отсылки события прохождения один раз.

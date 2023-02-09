@@ -7,7 +7,7 @@ using UnityEditor;
 
 using UnityEngine;
 
-namespace SpaceShooter
+namespace TowerDefense
 {
     /// <summary>
     /// 2Д зона с радиусом.

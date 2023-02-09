@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace SpaceShooter
+namespace TowerDefense
 {
     /// <summary>
     /// Контроллер переходов между уровнями. Должен быть с пометкой DoNotDetroyOnLoad

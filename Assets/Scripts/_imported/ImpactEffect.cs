@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SpaceShooter
+namespace TowerDefense
 {
 
     public class ImpactEffect : MonoBehaviour

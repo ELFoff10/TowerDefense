@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SpaceShooter
+namespace TowerDefense
 {
     /// <summary>
     /// Панель результатов уровня. Должна лежать в каждом уровне без галочки DoNotDestroyOnLoad.
