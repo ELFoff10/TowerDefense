@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TowerDefense
 {
@@ -9,8 +7,8 @@ namespace TowerDefense
     /// </summary>
     public class Player : MonoSingleton<Player>
     {
-
         [SerializeField] private int m_NumLives;
+        public int NumLives => m_NumLives;
         [SerializeField] private SpaceShip m_Ship;
         public SpaceShip ActiveShip => m_Ship;
 
@@ -21,7 +19,20 @@ namespace TowerDefense
 
         private void Start()
         {
-            m_Ship.EventOnDeath.AddListener(OnShipDeath);
+            if (m_Ship)
+            {
+                m_Ship.EventOnDeath.AddListener(OnShipDeath);
+            }
+        }
+
+        protected void TakeDamage(int m_Damage)
+        {
+            m_NumLives -= m_Damage;
+
+            if (m_NumLives <= 0)
+            {
+                LevelSequenceController.Instance.FinishCurrentLevel(false);
+            }
         }
 
         private void OnShipDeath()
@@ -45,7 +56,6 @@ namespace TowerDefense
 
             m_Ship.EventOnDeath.AddListener(OnShipDeath);
         }
-            
 
         #region Score (current level only)
 

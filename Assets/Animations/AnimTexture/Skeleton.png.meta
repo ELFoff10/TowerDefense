@@ -1,0 +1,388 @@
+fileFormatVersion: 2
+guid: 8b628500755d62a48892190b17c7d79b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_17
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 391
+        width: 158
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bce2244daec95f44b5de8f6073cdf38
+      internalID: -1904683640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_18
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 52
+        width: 158
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7d43d86518e614597671972fb9ab51
+      internalID: 324370601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_30
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 48
+        width: 158
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea14f137ab5bf854ba077d1007ff95d2
+      internalID: 592986139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_31
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 394
+        width: 158
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc8568350118a043842e3e986ee1dd1
+      internalID: -284986876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_44
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 48
+        width: 158
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edc2ada71665184892e674dc9c363f2
+      internalID: 1567834568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_46
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 392
+        width: 158
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee2e50d8d9a9b54b99fc853ed93bfa6
+      internalID: -250191822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_60
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 51
+        width: 158
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c5769f0fa14824aae98462685403db
+      internalID: 343440817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_61
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 386
+        width: 158
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e018dd0d71d73364c901f8dc4d82fdc4
+      internalID: -97198295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_0
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 720
+        width: 158
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ddc855876a92cd4396b17b8cc833bf6
+      internalID: 916334433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_54: 1331310210
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_9: 419027111
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_13: 284118131
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_1: -672246104
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_6: 1031966377
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_23: 346749373
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_26: -1739466679
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_29: -905693512
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_31: -284986876
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_51: -1978111026
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_19: -421731335
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_27: -268826431
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_5: 1394175452
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_48: -1171375740
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_8: -1093063239
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_30: 592986139
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_56: -135510417
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_36: 1856525619
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_63: -922987588
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_39: 2132505237
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_3: 599622724
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_44: 1567834568
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_7: 1064197411
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_49: -1511619725
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_58: 898767869
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_24: 426650831
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_12: -505401784
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_16: -908222331
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_15: 1152904735
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_46: -250191822
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_62: -218866626
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_61: -97198295
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_41: 310844746
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_60: 343440817
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_4: -557455545
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_52: -1448263601
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_47: -1088900259
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_35: 1636095752
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_42: -903096364
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_43: -258304011
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_2: -746515052
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_45: 1615962708
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_57: -13529693
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_10: -1682684830
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_14: -283465531
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_37: -904809346
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_59: -1747303169
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_22: -1367137867
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_53: -1967632293
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_21: 1060622610
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_28: 92413021
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_40: 1249482409
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_34: -1872905708
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_38: -1846297515
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_0: 916334433
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_20: 1290516227
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_11: 920815918
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_18: 324370601
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_32: 1304980549
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_17: -1904683640
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_33: -2071824147
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_50: 980605941
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_25: -1035441868
+      depositphotos_82391870-stock-illustration-animation-of-skeleton-walking_55: 401494631
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
