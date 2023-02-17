@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b68b5e8158283c4faf7c0a438ef3732, type: 3}
   m_Name: KnightWithSpearEnemy
   m_EditorClassIdentifier: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
-  SpriteScale: {x: 0.15, y: 0.15}
   Animations: {fileID: 9100000, guid: 3d71e7942d16f4e43a1191ca3a6c659c, type: 2}
-  MoveSpeed: 0.7
+  SpriteScale: {x: 0.15, y: 0.15}
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  Speed: 0.7
   HP: 3
   Score: 3
-  Radius: 0.6
-  Damage: 3
-  Gold: 3
+  Radius: 0.3
+  Damage: 1
+  Gold: 1

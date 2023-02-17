@@ -122,7 +122,6 @@ namespace TowerDefense
             ActionFindNewMovePosition();
             ActionControlShip();
             ActionFindNewAttackTarget();
-            ActionFire();
             ActionEvadeCollision();
         }
 
@@ -287,22 +286,6 @@ namespace TowerDefense
             }
         }
 
-        /// <summary>
-        /// Стреляем если надо.
-        /// </summary>
-        private void ActionFire()
-        {
-            if(m_SelectedTarget != null)
-            {
-                if(IsActionTimerFinished(ActionTimerType.Fire))
-                {
-                    m_SpaceShip.Fire(TurretMode.Primary);
-
-                    SetActionTimer(ActionTimerType.Fire, UnityEngine.Random.Range(0, m_ShootDelay));
-                }
-            }
-            
-        }
 
         /// <summary>
         /// Метод вычисления точки упреждения.

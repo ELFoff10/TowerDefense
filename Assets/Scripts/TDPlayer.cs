@@ -39,12 +39,28 @@ namespace TowerDefense
             OnLifeUpdate(NumLives);
         }
 
-        [SerializeField] private Tower m_TowerPrefab;
+        [SerializeField] private Tower m_TowerArrowPrefab;
+        [SerializeField] private Tower m_TowerMagicPrefab;
+        [SerializeField] private Tower m_TowerBigMagicrefab;
         public void TryBuild(TowerAsset towerAsset, Transform buildSite)
         {
             ChangeGold(-towerAsset.GoldCost);
-            var tower = Instantiate(m_TowerPrefab, buildSite.position, Quaternion.identity);
-            tower.GetComponentInChildren<SpriteRenderer>().sprite = towerAsset.Sprite;
+            if (towerAsset.name == "Tower1")
+            {
+                Instantiate(m_TowerArrowPrefab, buildSite.position, Quaternion.identity);
+            }
+            if (towerAsset.name == "Tower2")
+            {
+                Instantiate(m_TowerMagicPrefab, buildSite.position, Quaternion.identity);
+            }
+            if (towerAsset.name == "Tower3")
+            {
+                Instantiate(m_TowerBigMagicrefab, buildSite.position, Quaternion.identity);
+            }
+
+            /* var tower = */
+            //tower.GetComponentInChildren<SpriteRenderer>().sprite = towerAsset.Sprite;
+
             //tower.GetComponentInChildren<Turret>().Turre = towerAsset.m_Projectile;
 
             Destroy(buildSite.gameObject);

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b68b5e8158283c4faf7c0a438ef3732, type: 3}
   m_Name: TrollEnemy_02
   m_EditorClassIdentifier: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
-  SpriteScale: {x: 0.15, y: 0.15}
   Animations: {fileID: 9100000, guid: 69cc919bb997ecb41bc3af6c4dd4d58f, type: 2}
-  MoveSpeed: 0.4
+  SpriteScale: {x: 0.15, y: 0.15}
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  Speed: 1
   HP: 3
   Score: 3
-  Radius: 0.6
+  Radius: 0.9
   Damage: 2
   Gold: 1

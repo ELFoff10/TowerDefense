@@ -20,7 +20,7 @@ namespace TowerDefense
         [SerializeField] private float m_RespawnTime;
 
         private float m_Timer;
-
+        private float m_TimerAddNumSpawns;
         private void Start()
         {
             if(m_SpawnMode == SpawnMode.Start)
@@ -34,6 +34,13 @@ namespace TowerDefense
             if (m_Timer > 0)
             {
                 m_Timer -= Time.deltaTime;
+            }
+
+            m_TimerAddNumSpawns += Time.deltaTime;
+
+            if (m_TimerAddNumSpawns >= 60)
+            {
+                m_NumSpawns = 5;
             }
 
             if (m_SpawnMode == SpawnMode.Loop && m_Timer <= 0)

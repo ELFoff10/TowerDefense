@@ -156,38 +156,6 @@ namespace TowerDefense
         //    m_PrimaryEnergy += (float)m_EnergyRegenPerSecond * Time.fixedDeltaTime;
         //}
 
-        /// <summary>
-        /// TODO: заменить временный метод-заглушку. TODO - означает, что нужно не забыть обратить внимание
-        /// Используется турелями
-        /// </summary>
-        /// <param name="count"></param>
-        /// <returns></returns>
-        public bool DrawAmmo(int count)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// TODO: заменить временный метод-заглушку
-        /// Используется турелями
-        /// </summary>
-        /// <param name="count"></param>
-        /// <returns></returns>
-        public bool DrawEnergy(int count)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// TODO: заменить временный метод-заглушку
-        /// Используется ИИ.
-        /// </summary>
-        /// <param name="mode"></param>
-        public void Fire(TurretMode mode)
-        {
-            return;
-        }
-
         public void Use(EnemyAsset enemyAsset)
         {
             m_MaxLinearVelocity = enemyAsset.Speed;

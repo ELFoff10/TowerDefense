@@ -131,6 +131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Nickname: 
   m_Velocity: 3
-  m_Lifetime: 1
+  m_Lifetime: 2
   m_Damage: 1
   m_ImpactEffectPrefab: {fileID: 0}

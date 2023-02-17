@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b68b5e8158283c4faf7c0a438ef3732, type: 3}
   m_Name: ZombieEnemy
   m_EditorClassIdentifier: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
-  SpriteScale: {x: 0.5, y: 0.5}
   Animations: {fileID: 9100000, guid: 0bb308b0c3df7184d9cbf2a5c0d52a0b, type: 2}
-  MoveSpeed: 0.2
+  SpriteScale: {x: 0.5, y: 0.5}
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  Speed: 0.6
   HP: 2
   Score: 2
-  Radius: 0.5
-  Damage: 2
-  Gold: 2
+  Radius: 0.2
+  Damage: 1
+  Gold: 1
