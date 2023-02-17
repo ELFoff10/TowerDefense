@@ -1,26 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TowerDefense
 {
-    /// <summary>
-    /// Подтип оружия. Недо для паверапки чтобы понять куда в какой слот заменять.
-    /// </summary>
     public enum TurretMode
     {
         Primary,
         Secondary,
-        Auto
-            
+        Auto            
     }
 
     [CreateAssetMenu]
     public sealed class TurretProperties : ScriptableObject
     {
-        /// <summary>
-        /// Тип боеприпаса. Для первички или вторички.
-        /// </summary>
         [SerializeField] private TurretMode m_Mode;
         public TurretMode Mode => m_Mode;
 

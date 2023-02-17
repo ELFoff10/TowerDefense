@@ -1,20 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
 
 namespace TowerDefense
 {
     public class TowerBuyControl : MonoBehaviour
     {
-
         [SerializeField] private TowerAsset m_TowerAsset;
         [SerializeField] private TextMeshProUGUI m_Text;
         [SerializeField] private Button m_Button;
         [SerializeField] private Transform m_BuildSite;
-        public Transform BuildSite { set { m_BuildSite = value; } }
+        public void SetBuildSite(Transform value)
+        {
+            m_BuildSite = value;
+        }
 
         private void Start()
         {
@@ -35,6 +34,7 @@ namespace TowerDefense
         public void Buy()
         {
             TDPlayer.Instance.TryBuild(m_TowerAsset, m_BuildSite);
+            BuildSite.HideControls();
         }
     }
 }

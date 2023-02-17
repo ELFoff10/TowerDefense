@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEditor;
-using UnityEngine.UIElements;
 
 namespace TowerDefense
 {
@@ -10,7 +9,7 @@ namespace TowerDefense
         [SerializeField] private int m_Damage = 1;
         [SerializeField] private int m_Gold = 1;
 
-        public void Use(EnemyAsset enemyAsset)
+        public void UseEnemyAsset(EnemyAsset enemyAsset)
         {
             var spriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
 
@@ -24,14 +23,15 @@ namespace TowerDefense
 
             GetComponentInChildren<CircleCollider2D>().radius = enemyAsset.Radius;
 
-            m_Damage = enemyAsset.Damage;
-            m_Gold = enemyAsset.Gold;
+            enemyAsset.Damage = m_Damage;
+            enemyAsset.Gold = m_Gold;
         }
 
         public void DamagePlayer()
         {
             TDPlayer.Instance.ReduceLife(m_Damage);
         }
+
         public void GiveGoldPlayer()
         {
             TDPlayer.Instance.ChangeGold(m_Gold);
@@ -48,7 +48,7 @@ namespace TowerDefense
 
             if (a)
             {
-                (target as Enemy).Use(a);
+                (target as Enemy).UseEnemyAsset(a);
             }
         }
     }

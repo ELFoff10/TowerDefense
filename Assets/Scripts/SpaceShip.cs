@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Profiling;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TowerDefense
 {
-    /// <summary>
-    /// Летательный аппарат 2Д.
-    /// NOTE: важно учесть соотношение сил и скоростей чтобы физический движок не выдал пакость.
-    /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
     public class SpaceShip : Destructible
     {
@@ -198,7 +190,7 @@ namespace TowerDefense
 
         public void Use(EnemyAsset enemyAsset)
         {
-            m_MaxLinearVelocity = enemyAsset.MoveSpeed;
+            m_MaxLinearVelocity = enemyAsset.Speed;
             base.Use(enemyAsset);
         }
 

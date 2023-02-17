@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
@@ -28,8 +26,7 @@ namespace TowerDefense
             act(Instance.NumLives);
         }
 
-        [SerializeField] private int m_Gold = 0;
-        //[SerializeField] private int m_NumLives = 3;
+        [SerializeField] private int m_Gold = 15;
 
         public void ChangeGold(int change)
         {
@@ -42,13 +39,13 @@ namespace TowerDefense
             OnLifeUpdate(NumLives);
         }
 
-        // TODO: верим что золота на постройку достаточно
         [SerializeField] private Tower m_TowerPrefab;
         public void TryBuild(TowerAsset towerAsset, Transform buildSite)
         {
             ChangeGold(-towerAsset.GoldCost);
             var tower = Instantiate(m_TowerPrefab, buildSite.position, Quaternion.identity);
             tower.GetComponentInChildren<SpriteRenderer>().sprite = towerAsset.Sprite;
+            //tower.GetComponentInChildren<Turret>().Turre = towerAsset.m_Projectile;
 
             Destroy(buildSite.gameObject);
         }

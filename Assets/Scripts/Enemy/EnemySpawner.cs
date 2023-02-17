@@ -11,7 +11,7 @@ namespace TowerDefense
         protected override GameObject GenerateSpawnedEntity()
         {
             var enemy = Instantiate(m_EnemyPrefabs);
-            enemy.Use(m_EnemyAsset[Random.Range(0, m_EnemyAsset.Length)]);
+            enemy.UseEnemyAsset(m_EnemyAsset[Random.Range(0, m_EnemyAsset.Length)]);
             enemy.GetComponent<TDPatrolController>().SetPath(m_Path);
             return enemy.gameObject;
         }

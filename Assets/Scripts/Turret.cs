@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TowerDefense
 {
@@ -38,10 +36,10 @@ namespace TowerDefense
 
         #region Unity events
 
-        private void Start()
-        {
-            //m_Ship = transform.root.GetComponent<SpaceShip>();
-        }
+        //private void Start()
+        //{
+        //    //m_Ship = transform.root.GetComponent<SpaceShip>();
+        //}
 
         private void Update()
         {
@@ -81,7 +79,6 @@ namespace TowerDefense
                 if (!m_Ship.DrawAmmo(m_TurretProperties.AmmoUsage))
                     return;
             }
-
 
             // инстанцируем прожектайл который уже сам полетит.
             var projectile = Instantiate(m_TurretProperties.ProjectilePrefab.gameObject).GetComponent<Projectile>();

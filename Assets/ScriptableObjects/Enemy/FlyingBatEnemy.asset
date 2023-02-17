@@ -16,7 +16,7 @@ MonoBehaviour:
   SpriteScale: {x: 0.6, y: 0.6}
   Animations: {fileID: 9100000, guid: a607f6acea8cfba418a1156044dc2ed3, type: 2}
   MoveSpeed: 1
-  HP: 0
+  HP: 1
   Score: 1
   Radius: 0.38
   Damage: 1

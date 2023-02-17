@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TowerDefense
 {
-
     public class EntitySpawner : Spawner
     {
         [SerializeField] private GameObject[] m_EntityPrefabs;

@@ -17,7 +17,7 @@ MonoBehaviour:
   Animations: {fileID: 9100000, guid: 0bb308b0c3df7184d9cbf2a5c0d52a0b, type: 2}
   MoveSpeed: 0.2
   HP: 2
-  Score: 1
+  Score: 2
   Radius: 0.5
-  Damage: 1
-  Gold: 1
+  Damage: 2
+  Gold: 2
