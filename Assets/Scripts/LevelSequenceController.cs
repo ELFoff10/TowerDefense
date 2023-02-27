@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 
 namespace TowerDefense
 {
@@ -44,8 +41,7 @@ namespace TowerDefense
         /// </summary>
         public void RestartLevel()
         {
-            //SceneManager.LoadScene(CurrentEpisode.Levels[CurrentLevel]);
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         /// <summary>
@@ -66,7 +62,7 @@ namespace TowerDefense
             CurrentLevel++;
 
             // конец эпизода вываливаемся в главное меню.
-            if(CurrentEpisode.Levels.Length <= CurrentLevel)
+            if (CurrentEpisode.Levels.Length <= CurrentLevel)
             {
                 SceneManager.LoadScene(MainMenuSceneNickname);
             }

@@ -364,8 +364,6 @@ namespace TowerDefense
 
         #region AI collision evade
 
-
-
         /// <summary>
         /// Метод для изменения m_MovePosition так чтобы не вляпаться в коллайдер.
         /// </summary>

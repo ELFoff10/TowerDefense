@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TowerDefense
 {
@@ -9,6 +7,10 @@ namespace TowerDefense
     /// </summary>
     public class Projectile : Entity
     {
+        [SerializeField] private bool isHoming;
+
+        private Destructible m_Target;
+
         /// <summary>
         /// Линейная скорость полета снаряда.
         /// </summary>
@@ -27,16 +29,16 @@ namespace TowerDefense
         /// <summary>
         /// Эффект попадания от что то твердое. 
         /// </summary>
-        [SerializeField] private ImpactEffect m_ImpactEffectPrefab;
+        //[SerializeField] private ImpactEffect m_ImpactEffectPrefab;
 
         private float m_Timer;
 
         private void Update()
         {
             float stepLength = Time.deltaTime * m_Velocity;
-            Vector2 step = transform.up * stepLength;
+            Vector2 step = GetDirection() * stepLength;
 
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up,stepLength);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, stepLength);
             
             // не забыть выключить в свойствах проекта, вкладка Physics2D иначе не заработает
             // disable queries hit triggers
@@ -45,23 +47,23 @@ namespace TowerDefense
             {
                 var destructible = hit.collider.transform.root.GetComponent<Destructible>();
 
-                if(destructible != null && destructible != m_Parent)
+                if(destructible != null)
                 {
                     destructible.ApplyDamage(m_Damage);
 
                     // #Score
                     // добавляем очки за уничтожение
-                    if(Player.Instance != null && destructible.HitPoints < 0)
-                    {
-                        // проверяем что прожектайл принадлежит кораблю игрока. 
-                        // здесь есть нюанс - если мы выстрелим прожектайл и после умрем
-                        // то новый корабль игрока будет другим, в случае если прожектайл запущенный из предыдущего шипа
-                        // добьет то очков не дадут. Можно отправить пофиксить на ДЗ. (например тупо воткнув флаг что прожектайл игрока)
-                        if(m_Parent == Player.Instance.ActiveShip)
-                        {
-                            Player.Instance.AddScore(destructible.ScoreValue);
-                        }
-                    }
+                    //if(Player.Instance != null && destructible.HitPoints < 0)
+                    //{
+                    //    // проверяем что прожектайл принадлежит кораблю игрока. 
+                    //    // здесь есть нюанс - если мы выстрелим прожектайл и после умрем
+                    //    // то новый корабль игрока будет другим, в случае если прожектайл запущенный из предыдущего шипа
+                    //    // добьет то очков не дадут. Можно отправить пофиксить на ДЗ. (например тупо воткнув флаг что прожектайл игрока)
+                    //    //if(m_Parent == Player.Instance.ActiveShip)
+                    //    //{
+                    //    //    Player.Instance.AddScore(destructible.ScoreValue);
+                    //    //}
+                    //}
                 }
 
                 OnProjectileLifeEnd(hit.collider, hit.point);
@@ -77,21 +79,55 @@ namespace TowerDefense
 
         private void OnProjectileLifeEnd(Collider2D collider, Vector2 pos)
         {
-            if(m_ImpactEffectPrefab != null)
-            {
-                var impact = Instantiate(m_ImpactEffectPrefab.gameObject);
-                impact.transform.position = pos;
-            }
+            //if(m_ImpactEffectPrefab != null)
+            //{
+            //    var impact = Instantiate(m_ImpactEffectPrefab.gameObject);
+            //    impact.transform.position = pos;
+            //}
 
             Destroy(gameObject);
         }
 
-
-        private Destructible m_Parent;
-
-        public void SetParentShooter(Destructible parent)
+        public void SetParentShooter()
         {
-            m_Parent = parent;
+            m_Target = FindNearestDestructableTarget();
+        }
+        private Destructible FindNearestDestructableTarget() // Находит ближайший объект с Destructible
+        {
+            float maxDist = float.MaxValue;
+            Destructible potentialTarget = null;
+
+            // Перебираем все разрушаемые объекты сцены.
+            foreach (var destructible in Destructible.AllDestructibles)
+            {
+                // Определем дистанцию до объекта.
+                float dist = Vector2.Distance(transform.position, destructible.transform.position);
+
+                // Проверем что эта дистанция короче
+                if (dist < maxDist)
+                {
+                    // Переписываем минимальную дистанцию на ещё более короткую.
+                    maxDist = dist;
+
+                    // Запоминаем этого врага (кэш - как наиболее подходящего для атаки).
+                    potentialTarget = destructible;
+                }
+            }
+
+            return potentialTarget;
+        }
+
+        private Vector3 GetDirection() // Направление снаряда, нормализованный вектор
+        {
+            if (isHoming && m_Target != null)
+            {
+                transform.up = (m_Target.transform.position - transform.position).normalized;
+                return (m_Target.transform.position - transform.position).normalized;
+            }
+            else
+            {
+                return transform.up;
+            }
         }
     }
 }

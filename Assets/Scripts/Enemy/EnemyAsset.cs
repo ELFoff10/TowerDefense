@@ -3,7 +3,7 @@
 namespace TowerDefense
 {
     [CreateAssetMenu]
-    public sealed class EnemyAsset : ScriptableObject
+    public class EnemyAsset : ScriptableObject
     {
         [Header("Enemy Settings")]
         [Space(10)]

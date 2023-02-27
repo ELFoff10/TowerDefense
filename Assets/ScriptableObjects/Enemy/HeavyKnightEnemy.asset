@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b68b5e8158283c4faf7c0a438ef3732, type: 3}
   m_Name: HeavyKnightEnemy
   m_EditorClassIdentifier: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
-  SpriteScale: {x: 5, y: 5}
   Animations: {fileID: 9100000, guid: a51de84443603a743b5d8fef1bc5ff7c, type: 2}
-  MoveSpeed: 1
-  HP: 3
+  SpriteScale: {x: 5, y: 5}
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  Speed: 1
+  HP: 5
   Score: 5
   Radius: 0.38
+  Damage: 2
+  Gold: 2

@@ -9,18 +9,6 @@ namespace TowerDefense
         private float m_RefireTimer;
         public bool CanFire => m_RefireTimer <= 0;
 
-        /// <summary>
-        /// Кешированная ссылка на родительский шип.
-        /// </summary>
-        private SpaceShip m_Ship;
-
-        #region Unity events
-
-        //private void Start()
-        //{
-        //    //m_Ship = transform.root.GetComponent<SpaceShip>();
-        //}
-
         private void Update()
         {
             if (m_RefireTimer > 0)
@@ -29,13 +17,6 @@ namespace TowerDefense
             }
         }
 
-        #endregion
-
-        #region Public API
-
-        /// <summary>
-        /// Метод стрельбы турелью. 
-        /// </summary>
         public void Fire()
         {
             if (m_RefireTimer > 0)
@@ -50,13 +31,9 @@ namespace TowerDefense
             projectile.transform.up = transform.up;
 
             // метод выставления данных прожектайлу о том кто стрелял для избавления от попаданий в самого себя
-            projectile.SetParentShooter(m_Ship);
+            projectile.SetParentShooter();
 
             m_RefireTimer = m_TowerAsset.RateOfFire;
-            {
-                // SFX на домашку
-            }
         }
-        #endregion
     }
 }

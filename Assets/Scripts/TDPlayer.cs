@@ -5,6 +5,11 @@ namespace TowerDefense
 {
     public class TDPlayer : Player
     {
+        [SerializeField] private int m_Gold = 15;
+        [SerializeField] private Tower m_TowerArrowPrefab;
+        [SerializeField] private Tower m_TowerMagicPrefab;
+        [SerializeField] private Tower m_TowerBigMagicrefab;
+
         public static new TDPlayer Instance
         {
             get
@@ -26,25 +31,22 @@ namespace TowerDefense
             act(Instance.NumLives);
         }
 
-        [SerializeField] private int m_Gold = 15;
-
         public void ChangeGold(int change)
         {
             m_Gold += change;
             OnGoldUpdate(m_Gold);
         }
+
         public void ReduceLife(int change)
         {
             TakeDamage(change);
             OnLifeUpdate(NumLives);
         }
 
-        [SerializeField] private Tower m_TowerArrowPrefab;
-        [SerializeField] private Tower m_TowerMagicPrefab;
-        [SerializeField] private Tower m_TowerBigMagicrefab;
         public void TryBuild(TowerAsset towerAsset, Transform buildSite)
         {
             ChangeGold(-towerAsset.GoldCost);
+
             if (towerAsset.name == "Tower1")
             {
                 Instantiate(m_TowerArrowPrefab, buildSite.position, Quaternion.identity);

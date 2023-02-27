@@ -16,4 +16,4 @@ MonoBehaviour:
   m_GUISprite: {fileID: 21300000, guid: b3bb45350dd912e4fa4347e45fe340c9, type: 3}
   m_Sprite: {fileID: 21300000, guid: 09143938c6ccdce4a8a2d811556bd038, type: 3}
   m_ProjectilePrefab: {fileID: 269858798447417607, guid: 840e50a30ebbe00479cc52bb16d9bd25, type: 3}
-  m_RateOfFire: 0.3
+  m_RateOfFire: 1.2

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace TowerDefense
@@ -65,8 +63,6 @@ namespace TowerDefense
 
                 CheckLevelConditions();
             }
-
-
         }
 
         #endregion

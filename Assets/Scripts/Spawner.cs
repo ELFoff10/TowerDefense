@@ -19,11 +19,14 @@ namespace TowerDefense
 
         [SerializeField] private float m_RespawnTime;
 
-        private float m_Timer;
+        [SerializeField] private int m_TimeToArmageddon = 75;
+
         private float m_TimerAddNumSpawns;
+        private float m_Timer;
+
         private void Start()
         {
-            if(m_SpawnMode == SpawnMode.Start)
+            if (m_SpawnMode == SpawnMode.Start)
             {
                 SpawnEntities();
             }
@@ -38,9 +41,9 @@ namespace TowerDefense
 
             m_TimerAddNumSpawns += Time.deltaTime;
 
-            if (m_TimerAddNumSpawns >= 60)
+            if (m_TimerAddNumSpawns >= m_TimeToArmageddon)
             {
-                m_NumSpawns = 5;
+                m_NumSpawns = 10; // можно сделать серилизованные 10
             }
 
             if (m_SpawnMode == SpawnMode.Loop && m_Timer <= 0)

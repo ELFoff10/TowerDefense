@@ -10,6 +10,7 @@ namespace TowerDefense
         [SerializeField] private TextMeshProUGUI m_Text;
         [SerializeField] private Button m_Button;
         [SerializeField] private Transform m_BuildSite;
+
         public void SetBuildSite(Transform value)
         {
             m_BuildSite = value;
@@ -24,7 +25,7 @@ namespace TowerDefense
 
         private void GoldStatusCheck(int gold)
         {
-            if (gold >= m_TowerAsset.GoldCost != m_Button.interactable) // не понял 22.5 Контрол покупки одной башни 30 минута
+            if (gold >= m_TowerAsset.GoldCost != m_Button.interactable)
             {
                 m_Button.interactable = !m_Button.interactable;
                 m_Text.color = m_Button.interactable ? Color.white : Color.red;

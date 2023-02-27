@@ -5,7 +5,7 @@ namespace TowerDefense
     [CreateAssetMenu]
     public class TowerAsset : ScriptableObject
     {
-        [SerializeField] private int m_GoldCost = 15;
+        [SerializeField] private int m_GoldCost;
         public int GoldCost => m_GoldCost;
 
         [SerializeField] private Sprite m_GUISprite;
@@ -17,7 +17,7 @@ namespace TowerDefense
         [SerializeField] private Projectile m_ProjectilePrefab;
         public Projectile ProjectilePrefab => m_ProjectilePrefab;
 
-        [SerializeField] private float m_RateOfFire;
+        [SerializeField] private float m_RateOfFire = 0.8f;
         public float RateOfFire => m_RateOfFire;
     }
 }
