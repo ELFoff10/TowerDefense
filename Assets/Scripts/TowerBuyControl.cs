@@ -20,7 +20,7 @@ namespace TowerDefense
         {
             TDPlayer.GoldUpdateSubscribe(GoldStatusCheck);
             m_Text.text = m_TowerAsset.GoldCost.ToString();
-            m_Button.GetComponent<Image>().sprite = m_TowerAsset.GUISprite;
+            //m_Button.GetComponent<Image>().sprite = m_TowerAsset.GUISprite;
         }
 
         private void GoldStatusCheck(int gold)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace TowerDefense
@@ -25,11 +26,11 @@ namespace TowerDefense
         /// <param name="result"></param>
         public void Show(bool result)
         {
-            if (result)
-            {
-                UpdateCurrentLevelStats();
-                UpdateVisualStats();
-            }
+            //if (result)
+            //{
+            //    UpdateCurrentLevelStats();
+            //    UpdateVisualStats();
+            //}
 
             m_PanelSuccess?.gameObject.SetActive(result);
             m_PanelFailure?.gameObject.SetActive(!result);
@@ -50,7 +51,6 @@ namespace TowerDefense
         {
             LevelSequenceController.Instance.RestartLevel();
         }
-
 
         public class Stats
         {
@@ -83,7 +83,7 @@ namespace TowerDefense
             TotalStats.score += Player.Instance.Score;
 
             // бонус за время прохождения.
-            int timeBonus = LevelController.Instance.ReferenceTime - (int)LevelController.Instance.LevelTime;
+            int timeBonus = (int) (LevelController.Instance.ReferenceTime - LevelController.Instance.LevelTime);
 
             if(timeBonus > 0)
                 TotalStats.score += timeBonus;
@@ -98,6 +98,11 @@ namespace TowerDefense
             m_TotalScore.text = TotalStats.score.ToString();
             m_TotalPlayTime.text = System.Convert.ToInt32(TotalStats.time).ToString();
             m_TotalKills.text = TotalStats.numKills.ToString();
+        }
+
+        public void LoadLevelMap()
+        {
+            SceneManager.LoadScene(1);
         }
     }
 }

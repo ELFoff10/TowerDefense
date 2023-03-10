@@ -29,13 +29,13 @@ namespace TowerDefense
         /// <summary>
         /// Время прохождения в секундах за которое будут начисляться очки.
         /// </summary>
-        [SerializeField] private int m_ReferenceTime;
-        public int ReferenceTime => m_ReferenceTime;
+        [SerializeField] protected float m_ReferenceTime;
+        public float ReferenceTime => m_ReferenceTime;
 
         /// <summary>
         /// Событие которое будет вызвано когда уровень будет выполнен. Вызывается один раз.
         /// </summary>
-        [SerializeField] private UnityEvent m_EventLevelCompleted;
+        [SerializeField] protected UnityEvent m_EventLevelCompleted;
 
         /// <summary>
         /// Массив условий для успешного прохождения уровня.
@@ -50,7 +50,7 @@ namespace TowerDefense
 
         #region Unity events
 
-        private void Start()
+        protected void Start()
         {
             m_Conditions = GetComponentsInChildren<ILevelCondition>();
         }
@@ -83,10 +83,10 @@ namespace TowerDefense
                     numCompleted++;
             }
 
-            if(numCompleted == m_Conditions.Length)
+            if (numCompleted == m_Conditions.Length)
             {
                 m_IsLevelCompleted = true;
-                m_EventLevelCompleted?.Invoke();
+                m_EventLevelCompleted.Invoke();
 
                 // Notify level sequence Unit3 code
                 LevelSequenceController.Instance?.FinishCurrentLevel(true);

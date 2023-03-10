@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using System;
 
 namespace TowerDefense
 {
@@ -8,6 +9,12 @@ namespace TowerDefense
     {
         [SerializeField] private int m_Damage = 1;
         [SerializeField] private int m_Gold = 1;
+
+        public event Action OnEnemyEnd;
+        private void OnDestroy()
+        {
+            OnEnemyEnd?.Invoke();
+        }
 
         public void UseEnemyAsset(EnemyAsset enemyAsset)
         {
