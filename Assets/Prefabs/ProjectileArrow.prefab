@@ -133,4 +133,4 @@ MonoBehaviour:
   isHoming: 1
   m_Velocity: 4
   m_Lifetime: 4
-  m_Damage: 2
+  m_Damage: 3

@@ -12,6 +12,7 @@ namespace TowerDefense
         public Color Color = Color.white;
         public float Speed = 1f;
         public int HP = 1;
+        public int Armor = 0;
         public int Score = 1;
         public float Radius = 0.19f;
         public int Damage = 1;

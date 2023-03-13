@@ -47,6 +47,7 @@ namespace TowerDefense
             }
             return result;
         }
+
         public static int GetUpgradeLevel(UpgradeAsset asset)
         {
             foreach (var upgrade in Instance.m_Save)
