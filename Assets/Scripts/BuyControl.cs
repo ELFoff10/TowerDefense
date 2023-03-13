@@ -12,6 +12,11 @@ namespace TowerDefense
             gameObject.SetActive(false);
         }
 
+        private void OnDestroy()
+        {
+            BuildSite.OnClickEvent -= MoveToBuildSite;
+        }
+
         private void MoveToBuildSite(Transform buildSite)
         {
             if (buildSite)

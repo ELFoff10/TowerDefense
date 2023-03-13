@@ -5,10 +5,13 @@ namespace TowerDefense
 {
     public class TDPlayer : Player
     {
-        [SerializeField] private int m_Gold = 15;
+
         [SerializeField] private Tower m_TowerArrowPrefab;
         [SerializeField] private Tower m_TowerMagicPrefab;
         [SerializeField] private Tower m_TowerBigMagicrefab;
+
+        private int m_Gold = 15;
+        public int Gold => m_Gold;
 
         public static new TDPlayer Instance
         {
@@ -19,16 +22,28 @@ namespace TowerDefense
         }
 
         public static event Action<int> OnGoldUpdate;
+
         public static void GoldUpdateSubscribe(Action<int> act)
         {
             OnGoldUpdate += act;
             act(Instance.m_Gold);
         }
+
+        public static void GoldUpdateUnSubscribe(Action<int> act)
+        {
+            OnGoldUpdate -= act;
+        }
+
         public static event Action<int> OnLifeUpdate;
         public static void LifeUpdateSubscribe(Action<int> act)
         {
             OnLifeUpdate += act;
             act(Instance.NumLives);
+        }
+
+        public static void LifeUpdateUnSubscribe(Action<int> act)
+        {
+            OnLifeUpdate -= act;
         }
 
         public void ChangeGold(int change)
@@ -66,6 +81,19 @@ namespace TowerDefense
             //tower.GetComponentInChildren<Turret>().Turre = towerAsset.m_Projectile;
 
             Destroy(buildSite.gameObject);
+        }
+
+        [SerializeField] private UpgradeAsset m_HealthUpgrade;
+        [SerializeField] private UpgradeAsset m_MoneyUpgrade;
+
+        private new void Awake()
+        {
+            base.Awake();
+            var levelHealthUpgrade = Upgrades.GetUpgradeLevel(m_HealthUpgrade);
+            var levelMoneyUpgrade = Upgrades.GetUpgradeLevel(m_MoneyUpgrade);
+
+            TakeDamage(-levelHealthUpgrade * 3);
+            m_Gold += levelMoneyUpgrade * 5;
         }
 
         //public void TakeDamage(int m_Damage)

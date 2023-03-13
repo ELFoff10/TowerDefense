@@ -6319,8 +6319,8 @@ TextureImporter:
         y: 0
         width: 64
         height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6340,8 +6340,8 @@ TextureImporter:
         y: 0
         width: 64
         height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6361,8 +6361,8 @@ TextureImporter:
         y: 0
         width: 64
         height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6382,8 +6382,8 @@ TextureImporter:
         y: 0
         width: 64
         height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6479,18 +6479,18 @@ TextureImporter:
       towerDefense_tilesheet_168: -505493034
       towerDefense_tilesheet_91: -893280483
       towerDefense_tilesheet_83: -1583724760
-      towerDefense_tilesheet_113: -185534892
-      towerDefense_tilesheet_1: 171956368
       towerDefense_tilesheet_55: 1988950409
+      towerDefense_tilesheet_113: -185534892
+      towerDefense_tilesheet_61: 217400306
       towerDefense_tilesheet_217: -1760451111
       towerDefense_tilesheet_240: 67413627
       towerDefense_tilesheet_164: 1306300125
       towerDefense_tilesheet_137: -589897432
       towerDefense_tilesheet_237: 1788591612
       towerDefense_tilesheet_45: -1491714937
+      towerDefense_tilesheet_1: 171956368
       towerDefense_tilesheet_21: -592800139
       towerDefense_tilesheet_140: 479095103
-      towerDefense_tilesheet_61: 217400306
       towerDefense_tilesheet_9: -824237016
       towerDefense_tilesheet_15: -1006662204
       towerDefense_tilesheet_76: -629980500

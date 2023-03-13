@@ -48,27 +48,28 @@ namespace TowerDefense
         private int m_TotalScore;
         public int TotalScore => m_TotalScore;
 
-        private void Start() // тут у ментора Awake
+        private new void Awake() 
         {
+            base.Awake();
+
             Saver<EpisodeScore[]>.TryLoad(filename, ref m_ComplitionData);
+
             foreach (var episodeScore in m_ComplitionData)
             {
                 m_TotalScore += episodeScore.Score;
             }
         }
 
-        public bool TryIndex(int id, out Episode episode, out int score)
+        public int GetEpisodeScore(Episode episode)
         {
-            if (id >= 0 && id < m_ComplitionData.Length)
+            foreach (var data in m_ComplitionData)
             {
-                episode = m_ComplitionData[id].Episode;
-                score = m_ComplitionData[id].Score;
-                return true;
+                if (data.Episode == episode)
+                {
+                    return data.Score;
+                }                
             }
-
-            episode = null;
-            score = 0;
-            return false;
+            return 0;
         }
     }
 }

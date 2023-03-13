@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 namespace TowerDefense
@@ -11,8 +13,7 @@ namespace TowerDefense
     {
         [SerializeField] private RectTransform m_ResultPanel;
         [SerializeField] private Image[] m_ResultImages;
-
-        private Episode m_Episode;
+        [SerializeField] private Episode m_Episode;
 
         public bool IsComplete { get { return gameObject.activeSelf && m_ResultPanel.gameObject.activeSelf; } }
 
@@ -21,15 +22,18 @@ namespace TowerDefense
             LevelSequenceController.Instance.StartEpisode(m_Episode);
         }
 
-        public void SetLevelData(Episode episode, int score)
+        public int Initialise()
         {
-            m_Episode = episode;
+            var score = MapCompletion.Instance.GetEpisodeScore(m_Episode);
+
             m_ResultPanel.gameObject.SetActive(score > 0);
 
             for (int i = 0; i < score; i++)
             {
                 m_ResultImages[i].color = Color.white;
             }
+
+            return score;
         }
     }
 }

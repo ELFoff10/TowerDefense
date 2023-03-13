@@ -31,9 +31,11 @@ namespace TowerDefense
             //    UpdateCurrentLevelStats();
             //    UpdateVisualStats();
             //}
-
-            m_PanelSuccess?.gameObject.SetActive(result);
-            m_PanelFailure?.gameObject.SetActive(!result);
+            if (gameObject != null)
+            {
+                m_PanelSuccess.gameObject.SetActive(result);
+                m_PanelFailure.gameObject.SetActive(!result);
+            }            
         }
 
         /// <summary>
