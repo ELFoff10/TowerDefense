@@ -16,8 +16,9 @@ MonoBehaviour:
   SpriteScale: {x: 0.15, y: 0.15}
   Color: {r: 1, g: 1, b: 1, a: 1}
   Speed: 1
-  HP: 6
+  HP: 5
+  Armor: 1
   Score: 6
   Radius: 0.4
-  Damage: 3
-  Gold: 3
+  Damage: 1
+  Gold: 1

@@ -17,7 +17,9 @@ MonoBehaviour:
   Color: {r: 1, g: 1, b: 1, a: 1}
   Speed: 1
   HP: 5
+  Armor: 1
+  ArmorType: 0
   Score: 5
   Radius: 0.4
-  Damage: 2
-  Gold: 2
+  Damage: 1
+  Gold: 1

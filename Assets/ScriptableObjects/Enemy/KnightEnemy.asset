@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b68b5e8158283c4faf7c0a438ef3732, type: 3}
   m_Name: KnightEnemy
   m_EditorClassIdentifier: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
-  SpriteScale: {x: 4, y: 4}
   Animations: {fileID: 9100000, guid: 81957fde5e235744cb566dfc746f4dc3, type: 2}
-  MoveSpeed: 1
-  HP: 0
+  SpriteScale: {x: 4, y: 4}
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  Speed: 1
+  HP: 5
+  Armor: 0
   Score: 0
   Radius: 0.19
+  Damage: 1
+  Gold: 1

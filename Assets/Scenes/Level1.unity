@@ -308,9 +308,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4688717829709330646, guid: c76782c07263e0441898fb85f6202c5f, type: 3}
+      propertyPath: m_Gold
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688717829709330646, guid: c76782c07263e0441898fb85f6202c5f, type: 3}
       propertyPath: m_NumLives
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4688717829709330646, guid: c76782c07263e0441898fb85f6202c5f, type: 3}
+      propertyPath: m_TowerPrefab
+      value: 
+      objectReference: {fileID: 2545260244675460679, guid: 3e53296510506974c905be586e8a67b6, type: 3}
     - target: {fileID: 4688717829709330646, guid: c76782c07263e0441898fb85f6202c5f, type: 3}
       propertyPath: m_DoNotDestroyOnLoad
       value: 0
@@ -2378,7 +2386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3462715561435135578, guid: ccd02b671b9942c41a979bdd0e714e5d, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd02b671b9942c41a979bdd0e714e5d, type: 3}
@@ -2632,7 +2640,7 @@ MonoBehaviour:
   m_Groups:
   - squads:
     - asset: {fileID: 11400000, guid: 9e46125b541d06e4db6216fda416c948, type: 2}
-      count: 1
+      count: 5
   m_PrepareTime: 10
   m_Next: {fileID: 0}
 --- !u!1 &1161739241
@@ -2681,8 +2689,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Groups:
   - squads:
-    - asset: {fileID: 11400000, guid: 9cfa811bdce6aba4990a51fa827b9140, type: 2}
-      count: 4
+    - asset: {fileID: 11400000, guid: b39bab64e4b1cf54aa9036f8f261f9de, type: 2}
+      count: 5
+    - asset: {fileID: 11400000, guid: 2e1852d285674b04ab03b78c1cc6fe48, type: 2}
+      count: 5
   m_PrepareTime: 0
   m_Next: {fileID: 1293104058}
 --- !u!1 &1256431406
@@ -2777,12 +2787,12 @@ MonoBehaviour:
   m_Groups:
   - squads:
     - asset: {fileID: 11400000, guid: b39bab64e4b1cf54aa9036f8f261f9de, type: 2}
-      count: 1
+      count: 5
     - asset: {fileID: 11400000, guid: 2e1852d285674b04ab03b78c1cc6fe48, type: 2}
-      count: 1
+      count: 5
     - asset: {fileID: 11400000, guid: 27897ab70f0c903409f48078cb39a62d, type: 2}
-      count: 1
-  m_PrepareTime: 10
+      count: 5
+  m_PrepareTime: 30
   m_Next: {fileID: 978209483}
 --- !u!1 &1336882305
 GameObject:
@@ -3069,7 +3079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3462715561435135578, guid: ccd02b671b9942c41a979bdd0e714e5d, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd02b671b9942c41a979bdd0e714e5d, type: 3}
@@ -3286,7 +3296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3462715561435135578, guid: ccd02b671b9942c41a979bdd0e714e5d, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd02b671b9942c41a979bdd0e714e5d, type: 3}

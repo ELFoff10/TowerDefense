@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ff3054b96eb7e419df9f2943c0197c, type: 3}
+  m_Name: TowerBallista
+  m_EditorClassIdentifier: 
+  GoldCost: 15
+  TurretProperties: {fileID: 11400000, guid: 5815e5700a3bd634db927e3a4651b851, type: 2}
+  GUISprite: {fileID: 21300000, guid: ea1ee5c85e9fc324894601fa044a3f87, type: 3}
+  Sprite: {fileID: 21300000, guid: ea1ee5c85e9fc324894601fa044a3f87, type: 3}
