@@ -5,15 +5,13 @@ namespace TowerDefense
 {
     public class Player : MonoSingleton<Player>
     {
+        [SerializeField] private SpaceShip m_Ship, m_PlayerShipPrefab;
+        public SpaceShip ActiveShip => m_Ship;
+
         [SerializeField] private int m_NumLives;
         public int NumLives => m_NumLives;
 
         public event Action OnPlayerDead;
-
-        [SerializeField] private SpaceShip m_Ship;
-        public SpaceShip ActiveShip => m_Ship;
-
-        [SerializeField] private SpaceShip m_PlayerShipPrefab;
 
         private void Start()
         {

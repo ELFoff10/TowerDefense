@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using TowerDefense;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,10 +6,10 @@ namespace TowerDefense
 {
     public class UpgradeShop : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI moneyText;
+        [SerializeField] private TextMeshProUGUI m_TextAmountHearts;
         [SerializeField] private BuyUpgrade[] m_Sales;
 
-        private int money;
+        private int m_Money;
 
         private void Start()
         {
@@ -30,14 +25,14 @@ namespace TowerDefense
 
         public void UpdateMoney()
         {
-            money = MapCompletion.Instance.TotalScore;
-            money -= Upgrades.GetTotalCost();
+            m_Money = MapCompletion.Instance.TotalScore;
+            m_Money -= Upgrades.GetTotalCost();
 
-            moneyText.text = money.ToString();
+            m_TextAmountHearts.text = m_Money.ToString();
 
             foreach (var slot in m_Sales)
             {
-                slot.CheckCost(money);
+                slot.CheckCost(m_Money);
             }
         }
     }

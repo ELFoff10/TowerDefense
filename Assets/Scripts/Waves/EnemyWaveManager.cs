@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using TowerDefense;
 using UnityEngine;
 
 namespace TowerDefense
@@ -11,9 +8,31 @@ namespace TowerDefense
         [SerializeField] private Enemy m_EnemyPrefabs;
         [SerializeField] private Path[] m_Paths;
         [SerializeField] private EnemyWave m_CurrentWave;
-        public event Action OnAllWavesDead;
 
         private int m_ActiveEnemyCount = 0;
+
+        public event Action OnAllWavesDead;
+
+        private void Start()
+        {
+            m_CurrentWave.Prepare(SpawnEnemies);
+        }
+
+        public void ForceNextWave()
+        {
+            if (m_CurrentWave)
+            {
+                TDPlayer.Instance.ChangeGold((int)m_CurrentWave.GetRemainingTime());
+                SpawnEnemies();
+            }
+            else
+            {
+                if (m_ActiveEnemyCount == 0)
+                {
+                    OnAllWavesDead?.Invoke();
+                }
+            }
+        }
 
         private void RecordEnemyDead()
         {
@@ -21,11 +40,6 @@ namespace TowerDefense
             {
                 ForceNextWave();
             }
-        }
-
-        private void Start()
-        {
-            m_CurrentWave.Prepare(SpawnEnemies);
         }
 
         private void SpawnEnemies()
@@ -51,22 +65,6 @@ namespace TowerDefense
             }
 
             m_CurrentWave = m_CurrentWave.PrepareNext(SpawnEnemies);
-        }
-
-        public void ForceNextWave()
-        {
-            if (m_CurrentWave)
-            {
-                TDPlayer.Instance.ChangeGold((int)m_CurrentWave.GetRemainingTime());
-                SpawnEnemies();
-            }
-            else
-            {
-                if (m_ActiveEnemyCount == 0)
-                {
-                    OnAllWavesDead?.Invoke();
-                }                
-            }
         }
     }
 }

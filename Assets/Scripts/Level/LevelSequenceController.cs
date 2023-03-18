@@ -23,17 +23,17 @@ namespace TowerDefense
         /// <summary>
         /// Метод запуска первого уровня эпизода.
         /// </summary>
-        /// <param name="e"></param>
-        public void StartEpisode(Episode e)
+        /// <param name="episode"></param>
+        public void StartEpisode(Episode episode)
         {
-            CurrentEpisode = e;
+            CurrentEpisode = episode;
             CurrentLevel = 0;
 
             // сбрасываем статы перед началом эпизода.
             LevelResultController.ResetPlayerStats();
 
             // запускаем первый уровень эпизода.
-            SceneManager.LoadScene(e.Levels[CurrentLevel]);
+            SceneManager.LoadScene(episode.Levels[CurrentLevel]);
         }
 
         /// <summary>

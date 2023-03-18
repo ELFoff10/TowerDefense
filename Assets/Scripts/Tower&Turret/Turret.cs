@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
-using UnityEngine.XR;
 
 namespace TowerDefense
 {
     public class Turret : MonoBehaviour
     {
         [SerializeField] private TurretProperties m_TurretProperties;
-
 
         private TurretMode m_TurretMode;
         public TurretMode TurretMode => m_TurretMode;

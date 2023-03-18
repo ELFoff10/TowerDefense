@@ -16,3 +16,7 @@ MonoBehaviour:
   TurretProperties: {fileID: 11400000, guid: 28be256aff4ab0b4dabc7489310ea037, type: 2}
   GUISprite: {fileID: 21300000, guid: 3842a0198a4f1d94a80a2667b72ea9dc, type: 3}
   Sprite: {fileID: 21300000, guid: 3842a0198a4f1d94a80a2667b72ea9dc, type: 3}
+  RequiredUpgrade: {fileID: 11400000, guid: 1ef9fe10787a4994d8c34d12755ecdcd, type: 2}
+  RequiredUpgradeLevel: 1
+  m_UpgradesTo:
+  - {fileID: 11400000, guid: cbb43b02c6961cd438f544ad45d2d3bb, type: 2}

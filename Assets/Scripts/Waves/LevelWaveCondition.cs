@@ -1,20 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace TowerDefense
 {
     public class LevelWaveCondition : MonoBehaviour, ILevelCondition
     {
-        private bool isCompleted;
+        private bool m_IsCompleted;
 
-        public bool IsCompleted { get { return isCompleted; } }
+        public bool IsCompleted { get { return m_IsCompleted; } }
 
         private void Start()
         {
             FindObjectOfType<EnemyWaveManager>().OnAllWavesDead += () =>
             {
-                isCompleted = true;
+                m_IsCompleted = true;
             };
         }
     }

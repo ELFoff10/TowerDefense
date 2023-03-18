@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4688717829709330641}
   - component: {fileID: 4688717829709330646}
   - component: {fileID: 4688717829709330647}
-  - component: {fileID: 4688717829709330644}
+  - component: {fileID: 533906607}
   m_Layer: 0
   m_Name: PlayerCamp
   m_TagString: Untagged
@@ -46,14 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4f6570fd05e1043a43a75e32aed5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DoNotDestroyOnLoad: 1
+  m_DoNotDestroyOnLoad: 0
   m_NumLives: 3
   m_Ship: {fileID: 0}
   m_PlayerShipPrefab: {fileID: 0}
-  m_Gold: 15
-  m_TowerArrowPrefab: {fileID: 2545260244675460679, guid: e03a4a6acf810e449a24964750384545, type: 3}
-  m_TowerMagicPrefab: {fileID: 3248874781502045192, guid: 248315ebb11973349a341af2a5b044b5, type: 3}
-  m_TowerBigMagicrefab: {fileID: 3775127217208758237, guid: 1b095ffe3869dc44f9174a93defde1b6, type: 3}
+  m_TowerPrefab: {fileID: 2545260244675460679, guid: 3e53296510506974c905be586e8a67b6, type: 3}
+  m_Gold: 100
   m_HealthUpgrade: {fileID: 11400000, guid: dc7305beb4056474baecb70fa36db4b0, type: 2}
   m_MoneyUpgrade: {fileID: 11400000, guid: 0ecc8ed5da6044549967135937068bb2, type: 2}
 --- !u!114 &4688717829709330647
@@ -68,12 +66,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e135cd8e774e04b8313bb5cc5ee1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DoNotDestroyOnLoad: 1
+  m_DoNotDestroyOnLoad: 0
   m_ReferenceTime: 30
   m_EventLevelCompleted:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4688717829709330644
+--- !u!114 &533906607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,6 +80,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4688717829709330640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad71f65db6b8e945baa184ce751be28, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dc2027f158281a4fa602651cdbb7ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

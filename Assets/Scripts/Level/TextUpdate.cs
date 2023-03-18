@@ -13,6 +13,7 @@ namespace TowerDefense
         public UpdateSource Source = UpdateSource.Gold;
 
         private TextMeshProUGUI m_Text;
+
         private void Start()
         {
             m_Text = GetComponent<TextMeshProUGUI>();
@@ -20,26 +21,26 @@ namespace TowerDefense
             switch (Source)
             {
                 case UpdateSource.Gold:
-                    TDPlayer.GoldUpdateSubscribe(UpdateText);
+                    TDPlayer.Instance.GoldUpdateSubscribe(UpdateText);
                     break;
                 case UpdateSource.Life:
-                    TDPlayer.LifeUpdateSubscribe(UpdateText);
+                    TDPlayer.Instance.LifeUpdateSubscribe(UpdateText);
                     break;
             }
         }
 
-        //private void OnDestroy()
-        //{
-        //    switch (Source)
-        //    {
-        //        case UpdateSource.Gold:
-        //            TDPlayer.GoldUpdateUnSubscribe(UpdateText);
-        //            break;
-        //        case UpdateSource.Life:
-        //            TDPlayer.LifeUpdateUnSubscribe(UpdateText);
-        //            break;
-        //    }
-        //}
+        private void OnDestroy()
+        {
+            switch (Source)
+            {
+                case UpdateSource.Gold:
+                    TDPlayer.Instance.GoldUpdateUnSubscribe(UpdateText);
+                    break;
+                case UpdateSource.Life:
+                    TDPlayer.Instance.LifeUpdateUnSubscribe(UpdateText);
+                    break;
+            }
+        }
 
         private void UpdateText(int money)
         {

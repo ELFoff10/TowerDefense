@@ -5,24 +5,19 @@ namespace TowerDefense
     public abstract class Spawner : MonoBehaviour
     {
         protected abstract GameObject GenerateSpawnedEntity();
-
-        [SerializeField] private CircleArea m_CircleArea;
-
-        public enum SpawnMode
-        {
-            Start, Loop
-        }
+        public enum SpawnMode { Start, Loop }
 
         [SerializeField] private SpawnMode m_SpawnMode;
 
-        [SerializeField] private int m_NumSpawns;
+        [SerializeField] private CircleArea m_CircleArea;
 
-        [SerializeField] private float m_RespawnTime;
+        [SerializeField] private int m_NumSpawns;
 
         [SerializeField] private int m_TimeToArmageddon = 75;
 
-        private float m_TimerAddNumSpawns;
-        private float m_Timer;
+        [SerializeField] private float m_RespawnTime;
+
+        private float m_TimerAddNumSpawns, m_Timer;
 
         private void Start()
         {
@@ -55,7 +50,7 @@ namespace TowerDefense
 
         private void SpawnEntities()
         {
-            for(int i = 0; i < m_NumSpawns; i++)
+            for (int i = 0; i < m_NumSpawns; i++)
             {
                 var entity = GenerateSpawnedEntity();
                 entity.transform.position = m_CircleArea.RandomInsideZone;

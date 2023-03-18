@@ -9,9 +9,7 @@ namespace TowerDefense
     /// </summary>
     public class Projectile : Entity
     {
-        [SerializeField] private bool isHoming;
-
-        private Destructible m_Target;
+        [SerializeField] private bool m_IsHoming;
 
         /// <summary>
         /// Линейная скорость полета снаряда.
@@ -31,13 +29,18 @@ namespace TowerDefense
         /// <summary>
         /// Эффект попадания от что то твердое. 
         /// </summary>
+        /// 
+
         //[SerializeField] private ImpactEffect m_ImpactEffectPrefab;
+
+        private Destructible m_Target;
 
         private float m_Timer;
 
         private void Update()
         {
             float stepLength = Time.deltaTime * m_Velocity;
+
             Vector2 step = GetDirection() * stepLength;
 
             RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, stepLength);
@@ -136,7 +139,7 @@ namespace TowerDefense
 
         private Vector3 GetDirection() // Направление снаряда, нормализованный вектор
         {
-            if (isHoming && m_Target != null)
+            if (m_IsHoming && m_Target != null)
             {
                 transform.up = (m_Target.transform.position - transform.position).normalized;
                 return (m_Target.transform.position - transform.position).normalized;

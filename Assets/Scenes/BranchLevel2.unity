@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 258057595}
   - component: {fileID: 258057596}
   - component: {fileID: 258057597}
-  - component: {fileID: 258057599}
+  - component: {fileID: 258057598}
   m_Layer: 0
   m_Name: PlayerCamp
   m_TagString: Untagged
@@ -172,13 +172,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DoNotDestroyOnLoad: 0
-  m_NumLives: 1
+  m_NumLives: 3
   m_Ship: {fileID: 0}
   m_PlayerShipPrefab: {fileID: 0}
+  m_TowerPrefab: {fileID: 2545260244675460679, guid: 3e53296510506974c905be586e8a67b6, type: 3}
   m_Gold: 30
-  m_TowerArrowPrefab: {fileID: 2545260244675460679, guid: e03a4a6acf810e449a24964750384545, type: 3}
-  m_TowerMagicPrefab: {fileID: 3248874781502045192, guid: 248315ebb11973349a341af2a5b044b5, type: 3}
-  m_TowerBigMagicrefab: {fileID: 3775127217208758237, guid: 1b095ffe3869dc44f9174a93defde1b6, type: 3}
+  m_HealthUpgrade: {fileID: 11400000, guid: dc7305beb4056474baecb70fa36db4b0, type: 2}
+  m_MoneyUpgrade: {fileID: 11400000, guid: 0ecc8ed5da6044549967135937068bb2, type: 2}
 --- !u!114 &258057597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,11 +192,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DoNotDestroyOnLoad: 0
-  m_ReferenceTime: 0
+  m_ReferenceTime: 3
   m_EventLevelCompleted:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &258057599
+--- !u!114 &258057598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1221fee51b31446a96753ee6d7f70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TimeLimit: 6
+  m_TimeLimit: 2
 --- !u!1 &347212702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1301,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1378862163849222986, guid: 4ea6cc4a246efcd4f9b6b4c706458087, type: 3}
+      propertyPath: m_BuildSite
+      value: 
+      objectReference: {fileID: 3462715559765615810}
+    - target: {fileID: 1378862165311971564, guid: 4ea6cc4a246efcd4f9b6b4c706458087, type: 3}
+      propertyPath: m_BuildSite
+      value: 
+      objectReference: {fileID: 3462715559765615810}
+    - target: {fileID: 2477074934346387209, guid: 4ea6cc4a246efcd4f9b6b4c706458087, type: 3}
+      propertyPath: m_BuildSite
+      value: 
+      objectReference: {fileID: 3462715559765615810}
     - target: {fileID: 5205112423323530048, guid: 4ea6cc4a246efcd4f9b6b4c706458087, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -3653,6 +3665,7 @@ MonoBehaviour:
   - {fileID: 2078026530}
   - {fileID: 1006675170}
   - {fileID: 1284282693}
+  m_StartArea: {fileID: 0}
 --- !u!1 &1652646921
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,6 +4230,7 @@ MonoBehaviour:
   - {fileID: 1356457994}
   - {fileID: 1652646922}
   - {fileID: 1336882306}
+  m_StartArea: {fileID: 0}
 --- !u!114 &1907679080
 MonoBehaviour:
   m_ObjectHideFlags: 0

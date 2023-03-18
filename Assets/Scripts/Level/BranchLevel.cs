@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace TowerDefense
 {
@@ -14,6 +10,10 @@ namespace TowerDefense
         [SerializeField] private TextMeshProUGUI m_PointText;
         [SerializeField] private int m_NeedPoints = 3;
 
+        /// <summary>
+        /// Попытка активации ответвлённого уровня.
+        /// Активация требует наличия очков и выполнения прошлого уровня.
+        /// </summary>
         public void TryActivate()
         {
             gameObject.SetActive(m_RootLevel.IsComplete);

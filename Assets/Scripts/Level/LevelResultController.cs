@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -11,14 +9,9 @@ namespace TowerDefense
     /// </summary>
     public class LevelResultController : MonoSingleton<LevelResultController>
     { 
+        [SerializeField] private GameObject m_PanelSuccess, m_PanelFailure;
 
-        [SerializeField] private GameObject m_PanelSuccess;
-        [SerializeField] private GameObject m_PanelFailure;
-
-        [SerializeField] private Text m_LevelTime;
-        [SerializeField] private Text m_TotalPlayTime;
-        [SerializeField] private Text m_TotalScore;
-        [SerializeField] private Text m_TotalKills;
+        [SerializeField] private Text m_LevelTime, m_TotalPlayTime, m_TotalScore, m_TotalKills;
 
         /// <summary>
         /// Показываем окошко результатов. Выставляем нужные кнопочки в зависимости от успеха.

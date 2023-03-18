@@ -1,22 +1,20 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace TowerDefense
 {
     public class Upgrades : MonoSingleton<Upgrades>
     {
+        [SerializeField] private UpgradeSave[] m_Save;
+
         public const string filename = "upgrades.dat";
 
         [Serializable]
         private class UpgradeSave
         {
-            public UpgradeAsset m_Asset;
-            public int m_Level = 1;
+            public UpgradeAsset UpgradeAsset;
+            public int Level = 1; // у ментора 0
         }
-
-        [SerializeField] private UpgradeSave[] m_Save;
 
         private new void Awake()
         {
@@ -27,9 +25,9 @@ namespace TowerDefense
         {
             foreach (var upgrade in Instance.m_Save)
             {
-                if (upgrade.m_Asset == asset)
+                if (upgrade.UpgradeAsset == asset)
                 {
-                    upgrade.m_Level += 1;
+                    upgrade.Level += 1;
                     Saver<UpgradeSave[]>.Save(filename, Instance.m_Save);
                 }
             }
@@ -40,9 +38,9 @@ namespace TowerDefense
             int result = 0;
             foreach (var upgrade in Instance.m_Save)
             {
-                for (int i = 0; i < upgrade.m_Level; i++)
+                for (int i = 0; i < upgrade.Level; i++)
                 {
-                    result += upgrade.m_Asset.m_CostByLevel[i];
+                    result += upgrade.UpgradeAsset.CostByLevel[i];
                 }
             }
             return result;
@@ -52,9 +50,9 @@ namespace TowerDefense
         {
             foreach (var upgrade in Instance.m_Save)
             {
-                if (upgrade.m_Asset == asset)
+                if (upgrade.UpgradeAsset == asset)
                 {
-                    return upgrade.m_Level;
+                    return upgrade.Level;
                 }
             }
             return 0;

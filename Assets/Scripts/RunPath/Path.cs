@@ -9,11 +9,11 @@ namespace TowerDefense
         public CircleArea StartArea => m_StartArea;
         public int Lenght { get { return m_Points.Length; } }
 
-        public AIPointPatrol this[int index] { get => m_Points[index]; }
+        public AIPointPatrol this [int index] { get => m_Points[index]; }
 
         private void OnDrawGizmosSelected()
         {
-            Gizmos.color = UnityEngine.Color.green;
+            Gizmos.color = Color.green;
 
             foreach (var point in m_Points)
             {

@@ -8,20 +8,30 @@ namespace TowerDefense
     [RequireComponent(typeof(Destructible))]
     public class Enemy : MonoBehaviour
     {
+        [SerializeField] private int m_Damage, m_Armor, m_Gold;
+
+        public event Action OnEnemyEnd;
         public enum ArmorType { Base = 0, Magic = 1 }
+
+        private ArmorType m_ArmorType;
+
+        private Destructible m_Destructible;
 
         /// <summary>
         /// Массив функций, где мы прописали 2 функции.
+        /// По m_ArmorType мы определяем, какой массив вызвать и соответсвенно, либо 1ую, либо 2ую функцию.
         /// Func - похожь на Action, только последний параметр яв-ся возвращаемый тип значения
         /// </summary>
         private static Func<int, TDProjectile.DamageType, int, int>[] ArmorDamageFunctions =
         {
-            (int power, TDProjectile.DamageType type, int armor) =>
+            (int power, TDProjectile.DamageType type, int armor) => // функция из этих данных что-то возвращает
             {// ArmorType.Base
                 switch (type) // c помощью Base = 0, Magic = 1 мы дергаем функцию, которая нам нужна type == 0, идем сюда
                 {
-                    case TDProjectile.DamageType.Magic: return power;
-                    default: return Mathf.Max(power - armor, 1);
+                    case TDProjectile.DamageType.Magic: return power; // если type = magic,
+                                                                      // то мы возвращаем полностью инт урон(power)
+                                                                      // без отнимания брони
+                    default: return Mathf.Max(power - armor, 1); // если Base, то max от 1 до урона-броня.
                 }
             },
 
@@ -29,25 +39,17 @@ namespace TowerDefense
             {// ArmorType.Magic
                 if (TDProjectile.DamageType.Base == type)
                 {
-                    armor = armor / 2;
+                    armor /= 2;
                 }
                 return Mathf.Max(power - armor, 1);
             },
         };
-
-        [SerializeField] private int m_Damage = 1;
-        [SerializeField] private int m_Gold = 1;
-        [SerializeField] private int m_Armor = 1;
-        [SerializeField] private ArmorType m_ArmorType;
-
-        private Destructible m_Destructible;
 
         private void Awake()
         {
             m_Destructible = GetComponent<Destructible>();
         }
 
-        public event Action OnEnemyEnd;
         private void OnDestroy()
         {
             OnEnemyEnd?.Invoke();
@@ -89,19 +91,19 @@ namespace TowerDefense
         }
     }
 
-    [CustomEditor(typeof(Enemy))]
-    public class EnemyInspector : Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-            EnemyAsset a = EditorGUILayout.ObjectField(null, typeof(EnemyAsset), false) as EnemyAsset;
+    //[CustomEditor(typeof(Enemy))]
+    //public class EnemyInspector : Editor
+    //{
+    //    public override void OnInspectorGUI()
+    //    {
+    //        base.OnInspectorGUI();
+    //        EnemyAsset a = EditorGUILayout.ObjectField(null, typeof(EnemyAsset), false) as EnemyAsset;
 
-            if (a)
-            {
-                (target as Enemy).UseEnemyAsset(a);
-            }
-        }
-    }
+    //        if (a)
+    //        {
+    //            (target as Enemy).UseEnemyAsset(a);
+    //        }
+    //    }
+    //}
 }
 

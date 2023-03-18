@@ -5,9 +5,12 @@ namespace TowerDefense
 {
     public class TDPatrolController : AIController
     {
-        private Path m_Path;
-        private int m_PathIndex;
         [SerializeField] private UnityEvent m_OnEndPath;
+
+        private Path m_Path;
+
+        private int m_PathIndex;
+
         public void SetPath(Path newPath)
         {
             m_Path = newPath;

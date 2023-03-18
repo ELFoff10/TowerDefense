@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Nickname: 
-  isHoming: 0
-  m_Velocity: 4
-  m_Lifetime: 4
-  m_Damage: 3
+  isHoming: 1
+  m_Velocity: 6
+  m_Lifetime: 2
+  m_Damage: 2
   m_DamageType: 0

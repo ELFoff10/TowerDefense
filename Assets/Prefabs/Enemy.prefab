@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Nickname: 
   m_Indestructible: 0
   m_HitPoints: 15
+  m_CurrentHitPoints: 0
   m_EventOnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -192,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Damage: 1
+  m_Armor: 0
   m_Gold: 1
 --- !u!1 &8363117471765015367
 GameObject:
@@ -289,7 +291,7 @@ Animator:
   m_GameObject: {fileID: 8363117471765015367}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 81957fde5e235744cb566dfc746f4dc3, type: 2}
+  m_Controller: {fileID: 9100000, guid: a607f6acea8cfba418a1156044dc2ed3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

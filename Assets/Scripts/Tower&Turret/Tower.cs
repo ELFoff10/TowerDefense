@@ -6,29 +6,33 @@ namespace TowerDefense
     {
         [SerializeField] private float m_Radius = 5f;
 
-        private Turret[] turrets;
-        private Destructible target = null;
-        public void Use(TowerAsset asset)
+        private Turret[] m_Turrets;
+
+        private Destructible m_Target = null;
+
+        public void SetTurretProperties(TowerAsset asset)
         {
             GetComponentInChildren<SpriteRenderer>().sprite = asset.Sprite;
 
-            turrets = GetComponentsInChildren<Turret>();
+            m_Turrets = GetComponentsInChildren<Turret>();
 
-            foreach (var turret in turrets) 
+            foreach (var turret in m_Turrets) 
             {
                 turret.AssignLoadOut(asset.TurretProperties);
             }   
 
+            GetComponentInChildren<BuildSite>().SetBuildableTowers(asset.UpgradesTo);
         }
 
         private void Update()
         {
-            if (target)
+            if (m_Target)
             {
-                Vector2 targetVector = target.transform.position - transform.position;
+                Vector2 targetVector = m_Target.transform.position - transform.position;
+
                 if (targetVector.magnitude <= m_Radius)
                 {
-                    foreach (var turret in turrets)
+                    foreach (var turret in m_Turrets)
                     {
                         turret.transform.up = targetVector;
                         turret.Fire();
@@ -36,15 +40,16 @@ namespace TowerDefense
                 } 
                 else
                 {
-                    target = null;
+                    m_Target = null;
                 }
             }
             else
             {
                 var enter = Physics2D.OverlapCircle(transform.position, m_Radius);
+
                 if (enter)
                 {
-                    target = enter.transform.root.GetComponent<Destructible>();
+                    m_Target = enter.transform.root.GetComponent<Destructible>();
                 }
             }
         }
@@ -52,7 +57,6 @@ namespace TowerDefense
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.cyan;
-
             Gizmos.DrawWireSphere(transform.position, m_Radius);
         }
     }

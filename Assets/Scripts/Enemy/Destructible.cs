@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -74,7 +73,7 @@ namespace TowerDefense
 
             m_CurrentHitPoints -= damage;
 
-            if (m_CurrentHitPoints < 0)
+            if (m_CurrentHitPoints <= 0)
                 OnDeath();
         }
 

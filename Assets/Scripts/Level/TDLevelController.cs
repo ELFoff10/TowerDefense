@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace TowerDefense
@@ -36,10 +34,10 @@ namespace TowerDefense
             void LifeScoreChange(int _)
             {
                 m_LevelScore -= 1;
-                TDPlayer.OnLifeUpdate -= LifeScoreChange;
+                TDPlayer.Instance.OnLifeUpdate -= LifeScoreChange;
             }
 
-            TDPlayer.OnLifeUpdate += LifeScoreChange;
+            TDPlayer.Instance.OnLifeUpdate += LifeScoreChange;
         }
 
         private void StopLevelActivity()
