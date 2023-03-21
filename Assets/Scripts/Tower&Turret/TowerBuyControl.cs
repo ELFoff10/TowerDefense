@@ -25,7 +25,8 @@ namespace TowerDefense
         {
             TDPlayer.Instance.GoldUpdateSubscribe(GoldStatusCheck);
             m_Text.text = m_TowerAsset.GoldCost.ToString();
-            m_Button.GetComponentInChildren<Image>().sprite = m_TowerAsset.GUISprite;
+            m_Button.GetComponent<Image>().sprite = m_TowerAsset.GUISprite;
+            m_Button.GetComponent<Image>().SetNativeSize();
         }
 
         private void OnDestroy()

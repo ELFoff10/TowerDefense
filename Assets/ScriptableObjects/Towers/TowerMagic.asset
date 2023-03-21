@@ -16,7 +16,7 @@ MonoBehaviour:
   m_RequiredUpgradeLevel: 0
   GoldCost: 30
   TurretProperties: {fileID: 11400000, guid: 28be256aff4ab0b4dabc7489310ea037, type: 2}
-  GUISprite: {fileID: 21300000, guid: 3842a0198a4f1d94a80a2667b72ea9dc, type: 3}
+  GUISprite: {fileID: 21300000, guid: f35489fd723c72b49b131e70072e1cfe, type: 3}
   Sprite: {fileID: 21300000, guid: 3842a0198a4f1d94a80a2667b72ea9dc, type: 3}
   UpgradesTo:
   - {fileID: 11400000, guid: cbb43b02c6961cd438f544ad45d2d3bb, type: 2}

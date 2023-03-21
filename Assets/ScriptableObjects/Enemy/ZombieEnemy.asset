@@ -15,11 +15,11 @@ MonoBehaviour:
   Animations: {fileID: 9100000, guid: 0bb308b0c3df7184d9cbf2a5c0d52a0b, type: 2}
   SpriteScale: {x: 0.5, y: 0.5}
   Color: {r: 1, g: 1, b: 1, a: 1}
-  Speed: 0.5
-  HP: 3
+  Speed: 0.6
+  HP: 2
   Armor: 0
   ArmorType: 0
   Score: 1
-  Radius: 0.4
+  Radius: 0.6
   Damage: 1
   Gold: 1

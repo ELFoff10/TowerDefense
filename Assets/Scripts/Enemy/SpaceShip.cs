@@ -29,7 +29,7 @@ namespace TowerDefense
         public void HalfMaxLinearVelocity()
         {
             m_MaxVelocityBackup = m_MaxLinearVelocity;
-            m_MaxLinearVelocity /= 3; // у ментора 2
+            m_MaxLinearVelocity /= 2;
         }
         public void RestoreMaxLinearVelocity()
         {

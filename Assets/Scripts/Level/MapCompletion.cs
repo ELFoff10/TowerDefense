@@ -16,7 +16,7 @@ namespace TowerDefense
 
         [SerializeField] private EpisodeScore[] m_ComplitionData;
 
-        private int m_TotalScore;
+        private int m_TotalScore = 30;
         public int TotalScore => m_TotalScore;
 
         private new void Awake()
