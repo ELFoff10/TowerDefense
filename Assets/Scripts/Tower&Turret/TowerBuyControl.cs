@@ -6,12 +6,15 @@ namespace TowerDefense
 {
     public class TowerBuyControl : MonoBehaviour
     {
-        public void SetTowerAsset(TowerAsset asset) { m_TowerAsset = asset; }
-
         [SerializeField] private TowerAsset m_TowerAsset;
         [SerializeField] private Transform m_BuildSite;
         [SerializeField] private TextMeshProUGUI m_Text;
         [SerializeField] private Button m_Button;
+
+        public void SetTowerAsset(TowerAsset asset)
+        {
+            m_TowerAsset = asset;
+        }
 
         public void SetBuildSite(Transform value)
         {
@@ -22,7 +25,7 @@ namespace TowerDefense
         {
             TDPlayer.Instance.GoldUpdateSubscribe(GoldStatusCheck);
             m_Text.text = m_TowerAsset.GoldCost.ToString();
-            //m_Button.GetComponent<Image>().sprite = m_TowerAsset.GUISprite;
+            m_Button.GetComponentInChildren<Image>().sprite = m_TowerAsset.GUISprite;
         }
 
         private void OnDestroy()

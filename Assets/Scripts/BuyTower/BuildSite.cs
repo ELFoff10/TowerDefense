@@ -23,7 +23,7 @@ namespace TowerDefense
 
         public static void HideControls()
         {
-            OnClickEvent/*?.Invoke*/(null);
+            OnClickEvent?.Invoke(null);
         }
 
         public virtual void OnPointerDown(PointerEventData eventData)

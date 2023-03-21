@@ -153,14 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Groups:
-  - squads:
-    - asset: {fileID: 11400000, guid: 27897ab70f0c903409f48078cb39a62d, type: 2}
-      count: 1
-  - squads:
-    - asset: {fileID: 11400000, guid: 2e1852d285674b04ab03b78c1cc6fe48, type: 2}
-      count: 0
+  - Squads: []
+  - Squads: []
   m_PrepareTime: 0
-  m_Next: {fileID: 0}
+  m_NextWave: {fileID: 0}
 --- !u!4 &159447058
 Transform:
   m_ObjectHideFlags: 0
@@ -234,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4688717829709330641, guid: c76782c07263e0441898fb85f6202c5f, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4688717829709330641, guid: c76782c07263e0441898fb85f6202c5f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -519,13 +515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Groups:
-  - squads:
-    - asset: {fileID: 11400000, guid: 2e1852d285674b04ab03b78c1cc6fe48, type: 2}
-      count: 1
-    - asset: {fileID: 11400000, guid: b39bab64e4b1cf54aa9036f8f261f9de, type: 2}
-      count: 1
+  - Squads: []
   m_PrepareTime: 10
-  m_Next: {fileID: 1207286730}
+  m_NextWave: {fileID: 0}
 --- !u!4 &627539023
 Transform:
   m_ObjectHideFlags: 0
@@ -1000,6 +992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b423015913eb6644864b32861e0e0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildableTowers: []
 --- !u!224 &765649331
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1300,7 +1293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5205112423323530052, guid: 4ea6cc4a246efcd4f9b6b4c706458087, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5205112423323530052, guid: 4ea6cc4a246efcd4f9b6b4c706458087, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1421,51 +1414,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Radius: 0.5
---- !u!1 &1203816992
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1203816994}
-  - component: {fileID: 1203816993}
-  m_Layer: 0
-  m_Name: Test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1203816993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203816992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89952c2764d1c5f41ab1fdf86fef6cd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_DoNotDestroyOnLoad: 0
---- !u!4 &1203816994
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203816992}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 917.3157, y: 562.2399, z: -0.93317485}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1207286729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,17 +1444,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Groups:
-  - squads:
-    - asset: {fileID: 11400000, guid: b39bab64e4b1cf54aa9036f8f261f9de, type: 2}
-      count: 1
-    - asset: {fileID: 11400000, guid: 2e1852d285674b04ab03b78c1cc6fe48, type: 2}
-      count: 1
-    - asset: {fileID: 11400000, guid: 27897ab70f0c903409f48078cb39a62d, type: 2}
-      count: 1
-    - asset: {fileID: 11400000, guid: 73f501fb8d10ff64da6ca2d47fc1c94a, type: 2}
-      count: 1
+  - Squads: []
   m_PrepareTime: 10
-  m_Next: {fileID: 0}
+  m_NextWave: {fileID: 0}
 --- !u!4 &1207286731
 Transform:
   m_ObjectHideFlags: 0
@@ -3930,6 +3870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10bd1d46c135324683efb15a933799c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildableTowers: []
 --- !u!1 &1789461424
 GameObject:
   m_ObjectHideFlags: 0
@@ -4062,6 +4003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b423015913eb6644864b32861e0e0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildableTowers: []
 --- !u!224 &1809364083
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4227,6 +4169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b423015913eb6644864b32861e0e0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildableTowers: []
 --- !u!224 &1907679081
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4348,7 +4291,7 @@ Transform:
   - {fileID: 1269791522}
   - {fileID: 636032592}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2078026528
 GameObject:

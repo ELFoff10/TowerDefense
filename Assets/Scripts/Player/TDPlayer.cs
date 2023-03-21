@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 namespace TowerDefense
 {
@@ -73,7 +74,7 @@ namespace TowerDefense
 
             tower.SetTurretProperties(towerAsset);
 
-            tower.GetComponentInChildren<SpriteRenderer>().sprite = towerAsset.Sprite;
+            //tower.GetComponentInChildren<SpriteRenderer>().sprite = towerAsset.Sprite;
 
             tower.GetComponentInChildren<Turret>().AssignLoadOut(towerAsset.TurretProperties);
 

@@ -13,7 +13,7 @@ namespace TowerDefense
         private class UpgradeSave
         {
             public UpgradeAsset UpgradeAsset;
-            public int Level = 1; // у ментора 0
+            public int Level = 0;
         }
 
         private new void Awake()

@@ -27,7 +27,7 @@ namespace TowerDefense
                         m_LevelScore -= 1;
                     }
                     
-                    MapCompletion.SaveEpisodeResult(m_LevelScore); // Может быть нужно перенести в LevSeqCon
+                    MapCompletion.SaveEpisodeResult(m_LevelScore); 
                 }
             );
 

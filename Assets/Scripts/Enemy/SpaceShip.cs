@@ -25,6 +25,16 @@ namespace TowerDefense
         /// Максимальная линейная скорость.
         /// </summary>
         [SerializeField] private float m_MaxLinearVelocity;
+        private float m_MaxVelocityBackup;
+        public void HalfMaxLinearVelocity()
+        {
+            m_MaxVelocityBackup = m_MaxLinearVelocity;
+            m_MaxLinearVelocity /= 3; // у ментора 2
+        }
+        public void RestoreMaxLinearVelocity()
+        {
+            m_MaxLinearVelocity = m_MaxVelocityBackup;
+        }
 
         /// <summary>
         /// Максимальная вращательная скорость. В градусах/сек

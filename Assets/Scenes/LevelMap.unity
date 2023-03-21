@@ -945,18 +945,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DoNotDestroyOnLoad: 1
   m_ComplitionData:
-  - m_Episode: {fileID: 11400000, guid: 1db9008299bc2f743aa874d11a8f1273, type: 2}
-    m_Score: 0
-  - m_Episode: {fileID: 11400000, guid: 33a645335f5ff59449f6231d2409c581, type: 2}
-    m_Score: 0
-  - m_Episode: {fileID: 11400000, guid: 47579858d26ddc54398b061e68204043, type: 2}
-    m_Score: 0
-  - m_Episode: {fileID: 11400000, guid: 72131b11944d9304c93c700606136cd0, type: 2}
-    m_Score: 0
-  - m_Episode: {fileID: 11400000, guid: 49c6a0981aa9ff64485bec02a0de0b07, type: 2}
-    m_Score: 0
-  - m_Episode: {fileID: 11400000, guid: 9a9601e393a45524683cf2fd47ad20b1, type: 2}
-    m_Score: 0
+  - Episode: {fileID: 0}
+    Score: 0
+  - Episode: {fileID: 0}
+    Score: 0
+  - Episode: {fileID: 0}
+    Score: 0
+  - Episode: {fileID: 0}
+    Score: 0
+  - Episode: {fileID: 0}
+    Score: 0
+  - Episode: {fileID: 0}
+    Score: 0
 --- !u!114 &264509872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,10 +971,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DoNotDestroyOnLoad: 0
   m_Save:
-  - m_Asset: {fileID: 11400000, guid: dc7305beb4056474baecb70fa36db4b0, type: 2}
-    m_Level: 0
-  - m_Asset: {fileID: 11400000, guid: 0ecc8ed5da6044549967135937068bb2, type: 2}
-    m_Level: 0
+  - UpgradeAsset: {fileID: 11400000, guid: dc7305beb4056474baecb70fa36db4b0, type: 2}
+    Level: 0
+  - UpgradeAsset: {fileID: 11400000, guid: 0ecc8ed5da6044549967135937068bb2, type: 2}
+    Level: 0
+  - UpgradeAsset: {fileID: 11400000, guid: 1ef9fe10787a4994d8c34d12755ecdcd, type: 2}
+    Level: 1
 --- !u!1 &283159971
 GameObject:
   m_ObjectHideFlags: 0

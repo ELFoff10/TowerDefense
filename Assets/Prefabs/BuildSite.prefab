@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 21416274}
   - component: {fileID: 21416277}
   - component: {fileID: 21416276}
-  - component: {fileID: 21416275}
+  - component: {fileID: 7636446216133313376}
   m_Layer: 0
   m_Name: BuildSiteRect
   m_TagString: Untagged
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &21416275
+--- !u!114 &7636446216133313376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c3bed4db39d6ca74c8e6f31522269e58, type: 2}
   - {fileID: 11400000, guid: e1055c855682e2f4db3f9cb7af6622e4, type: 2}
   - {fileID: 11400000, guid: cbb43b02c6961cd438f544ad45d2d3bb, type: 2}
-  - {fileID: 11400000, guid: ee927309a7189e74e9180b27fac43def, type: 2}
 --- !u!1 &208165560
 GameObject:
   m_ObjectHideFlags: 0
