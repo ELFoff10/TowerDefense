@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TowerAsset: {fileID: 11400000, guid: c3bed4db39d6ca74c8e6f31522269e58, type: 2}
-  m_BuildSite: {fileID: 524680565784104975, guid: 988f612828c85a945944dd9e1e71d91d, type: 3}
+  m_BuildSite: {fileID: 3462715560518224931, guid: ccd02b671b9942c41a979bdd0e714e5d, type: 3}
   m_Text: {fileID: 6565955780885170311}
   m_Button: {fileID: 6565955781130500813}
 --- !u!1 &6565955781661306967

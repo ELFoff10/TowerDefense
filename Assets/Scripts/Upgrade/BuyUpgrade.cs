@@ -15,7 +15,7 @@ namespace TowerDefense
         public void Initialize()
         {
             var savedLevel = Upgrades.GetUpgradeLevel(m_UpgradeAsset);
-            m_TextLevel.text = (savedLevel + 1).ToString();
+            m_TextLevel.text = (savedLevel).ToString();
             m_TextCost.text = m_UpgradeAsset.CostByLevel[savedLevel].ToString();
 
             if (savedLevel >= m_UpgradeAsset.CostByLevel.Length)

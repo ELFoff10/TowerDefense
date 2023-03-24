@@ -1,6 +1,5 @@
 using UnityEngine;
 using System;
-using UnityEngine.UI;
 
 namespace TowerDefense
 {
@@ -10,15 +9,49 @@ namespace TowerDefense
 
         [SerializeField] private int m_Gold = 15;
 
-        [SerializeField] private UpgradeAsset m_HealthUpgrade, m_MoneyUpgrade;
+        [SerializeField] private int m_AbilityEnergy = 30;
 
-        private void Start()
+        public int AbilityEnergy => m_AbilityEnergy;
+
+        [SerializeField] private UpgradeAsset m_HealthUpgrade, m_MoneyUpgrade, m_FireAbilityUpgrade, m_SlowAbilityUpgrade;
+        [SerializeField] private GameObject m_FireAbility;
+        [SerializeField] private GameObject m_SlowAbility;
+
+        protected override void Awake()
         {
-            var levelHealthUpgrade = Upgrades.GetUpgradeLevel(m_HealthUpgrade);
-            var levelMoneyUpgrade = Upgrades.GetUpgradeLevel(m_MoneyUpgrade);
+            base.Awake();
+            var healthBonus = Upgrades.GetUpgradeLevel(m_HealthUpgrade);
+            var moneyBonus = Upgrades.GetUpgradeLevel(m_MoneyUpgrade);
+            var fireAbility = Upgrades.GetUpgradeLevel(m_FireAbilityUpgrade);
+            var slowAbility = Upgrades.GetUpgradeLevel(m_SlowAbilityUpgrade);
 
-            TakeDamage(-levelHealthUpgrade * 3);
-            m_Gold += levelMoneyUpgrade * 5;
+            if (gameObject != null)
+            {
+                m_FireAbility.gameObject.SetActive(false);
+                m_SlowAbility.gameObject.SetActive(false);
+            }
+
+            if (fireAbility > 0)
+            {
+                m_FireAbility.gameObject.SetActive(true);
+                Abilities.Instance.UpgradeFireAbility(fireAbility);
+            }
+
+            if (slowAbility > 0)
+            {
+                m_SlowAbility.gameObject.SetActive(true);
+                Abilities.Instance.UpgradeSlowAbility(slowAbility);
+            }
+
+            if (healthBonus > 0)
+            {
+                TakeDamage(-healthBonus * 5);
+            }
+
+            if (moneyBonus > 0)
+            {
+                m_Gold += moneyBonus * 10;
+            }
         }
 
         public static new TDPlayer Instance
@@ -54,6 +87,19 @@ namespace TowerDefense
             OnLifeUpdate -= act;
         }
 
+        public event Action<int> OnEnergyUpdate;
+
+        public void EnergyUpdateSubscribe(Action<int> act)
+        {
+            OnEnergyUpdate += act;
+            act(m_AbilityEnergy);
+        }
+
+        public void EnergyUpdateUnSubscribe(Action<int> act)
+        {
+            OnEnergyUpdate -= act;
+        }
+
         public void ChangeGold(int change)
         {
             m_Gold += change;
@@ -64,6 +110,12 @@ namespace TowerDefense
         {
             TakeDamage(change);
             OnLifeUpdate(NumLives);
+        }
+
+        public void ChangeEnergy(int change)
+        {
+            m_AbilityEnergy += change;
+            OnEnergyUpdate(m_AbilityEnergy);
         }
 
         public void TryBuild(TowerAsset towerAsset, Transform buildSite)

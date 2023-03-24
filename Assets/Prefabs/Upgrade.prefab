@@ -983,10 +983,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UpgradeAsset: {fileID: 11400000, guid: dc7305beb4056474baecb70fa36db4b0, type: 2}
-  m_ImageUpgradeIcon: {fileID: 7961397342251654548}
   m_TextLevel: {fileID: 7961397342979545041}
   m_TextCost: {fileID: 7961397342797500807}
-  m_BuyButton: {fileID: 7961397343931776217}
+  m_ButtonBuy: {fileID: 7961397343931776217}
 --- !u!1 &7961397343931776215
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ namespace TowerDefense
     {
         public enum UpdateSource 
         {
-            Gold, Life
+            Gold, Life, Energy
         }
 
         public UpdateSource Source = UpdateSource.Gold;
@@ -26,6 +26,9 @@ namespace TowerDefense
                 case UpdateSource.Life:
                     TDPlayer.Instance.LifeUpdateSubscribe(UpdateText);
                     break;
+                case UpdateSource.Energy:
+                    TDPlayer.Instance.EnergyUpdateSubscribe(UpdateText);
+                    break;
             }
         }
 
@@ -39,12 +42,15 @@ namespace TowerDefense
                 case UpdateSource.Life:
                     TDPlayer.Instance.LifeUpdateUnSubscribe(UpdateText);
                     break;
+                case UpdateSource.Energy:
+                    TDPlayer.Instance.EnergyUpdateUnSubscribe(UpdateText);
+                    break;
             }
         }
 
-        private void UpdateText(int money)
+        private void UpdateText(int i)
         {
-            m_Text.text = money.ToString();
+            m_Text.text = i.ToString();
         }
     }
 }
