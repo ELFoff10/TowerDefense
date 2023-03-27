@@ -28,16 +28,25 @@ namespace TowerDefense
         {
             if (m_Target)
             {
-                Vector2 targetVector = m_Target.transform.position - transform.position;
+                //Vector2 targetVector = m_Target.transform.position - transform.position;
 
-                if (targetVector.magnitude <= m_Radius)
+                //if (targetVector.magnitude <= m_Radius)
+                //{
+                //    foreach (var turret in m_Turrets)
+                //    {
+                //        turret.transform.up = targetVector;
+                //        turret.Fire();
+                //    }
+                //}
+
+                if (Vector3.Distance(m_Target.transform.position, transform.position) <= m_Radius)
                 {
                     foreach (var turret in m_Turrets)
                     {
-                        turret.transform.up = targetVector;
+                        turret.transform.up = m_Target.transform.position - turret.transform.position;
                         turret.Fire();
                     }
-                } 
+                }
                 else
                 {
                     m_Target = null;
