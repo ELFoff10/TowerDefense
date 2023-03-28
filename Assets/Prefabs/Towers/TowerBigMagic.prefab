@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5399c8fd91ad3ba4f8d8a01bd6d36bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TurretProperties: {fileID: 0}
+  m_TurretProperties: {fileID: 11400000, guid: 3d51a82ab4e13c849aab290a62bfa412, type: 2}
 --- !u!1 &9143545099419803103
 GameObject:
   m_ObjectHideFlags: 0

@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5399c8fd91ad3ba4f8d8a01bd6d36bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TowerAsset: {fileID: 11400000, guid: c3bed4db39d6ca74c8e6f31522269e58, type: 2}
+  m_TurretProperties: {fileID: 11400000, guid: 5815e5700a3bd634db927e3a4651b851, type: 2}
 --- !u!1 &3619971117405161200
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,8 @@ namespace TowerDefense
             private new Sounds target => base.target as Sounds;
             public override void OnInspectorGUI()
             {
+                base.OnInspectorGUI();
+
                 if (target.m_Sounds.Length < soundCount)
                 {
                     Array.Resize(ref target.m_Sounds, soundCount);

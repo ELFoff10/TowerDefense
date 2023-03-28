@@ -15,9 +15,11 @@ MonoBehaviour:
   Animations: {fileID: 9100000, guid: 3d71e7942d16f4e43a1191ca3a6c659c, type: 2}
   SpriteScale: {x: 0.15, y: 0.15}
   Color: {r: 1, g: 1, b: 1, a: 1}
-  Speed: 0.9
+  Speed: 1
   HP: 5
+  Armor: 5
+  ArmorType: 0
   Score: 5
   Radius: 0.4
-  Damage: 1
-  Gold: 1
+  Damage: 5
+  Gold: 5
