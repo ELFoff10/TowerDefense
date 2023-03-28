@@ -91,19 +91,21 @@ namespace TowerDefense
         }
     }
 
-    //[CustomEditor(typeof(Enemy))]
-    //public class EnemyInspector : Editor
-    //{
-    //    public override void OnInspectorGUI()
-    //    {
-    //        base.OnInspectorGUI();
-    //        EnemyAsset a = EditorGUILayout.ObjectField(null, typeof(EnemyAsset), false) as EnemyAsset;
+#if UNITY_EDITOR
+    [CustomEditor(typeof(Enemy))]
+    public class EnemyInspector : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+            EnemyAsset a = EditorGUILayout.ObjectField(null, typeof(EnemyAsset), false) as EnemyAsset;
 
-    //        if (a)
-    //        {
-    //            (target as Enemy).UseEnemyAsset(a);
-    //        }
-    //    }
-    //}
+            if (a)
+            {
+                (target as Enemy).UseEnemyAsset(a);
+            }
+        }
+    }
+#endif
 }
 
